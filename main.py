@@ -9,3 +9,5 @@ def restart_script_if_update():
         print("Restarting script...")
         os.remove(os.path.join(os.curdir, "tmp", "UPDATE"))
         os.execv(sys.executable, [sys.executable] + sys.argv)
+
+restart_script_if_update()

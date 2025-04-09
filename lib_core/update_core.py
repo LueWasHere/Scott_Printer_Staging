@@ -85,6 +85,8 @@ def run_update(contentJson: dict, logger: LueLogger) -> None:
         # Place update token so the python script knows to restart
         with open(f"{os.curdir}/tmp/UPDATE", 'a') as f:
             f.close()
+
+        logger.log("Update completed")
     else:
         logger.log("No update necessary")
 
